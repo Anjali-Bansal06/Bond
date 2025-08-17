@@ -87,16 +87,7 @@ export default function Chat() {
   const onSend = (text) => {
     const socket = socketRef.current;
     if (socket && socket.connected) {
-      // socket.emit('message', { room, content: text });
-      // // optimistic UI
-      // const optimistic = {
-      //   _id: `temp-${Date.now()}`,
-      //   content: text,
-      //   sender: me,
-      //   createdAt: new Date().toISOString(),
-      // };
-      // setMessages((prev) => [...prev, optimistic]);
-       socket.emit('message', { room, content: text });
+        socket.emit('message', { room, content: text });
     } else {
       console.warn('Socket not connected: message not sent');
     }
