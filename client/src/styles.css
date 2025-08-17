@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+.container { display: grid; grid-template-columns: 260px 1fr; height: 100vh; }
+.sidebar { border-right: 1px solid #eee; padding: 16px; }
+.header { display:flex; align-items:center; justify-content:space-between; padding: 8px 12px; border-bottom: 1px solid #eee; }
+.messages { padding: 12px; overflow-y: auto; height: calc(100vh - 56px - 64px); }
+.msg { margin: 8px 0; max-width: 70%; padding: 8px 12px; border-radius: 12px; }
+.msg.me { background: #e0f7ff; margin-left: auto; }
+.msg.other { background: #f2f2f2; }
+.inputBar { display:flex; gap:8px; padding: 12px; border-top: 1px solid #eee; }
+input, button { padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; }
+button { cursor: pointer; }
+.auth { max-width: 360px; margin: 80px auto; padding: 24px; border: 1px solid #eee; border-radius: 12px; }
+.auth h1 { margin-top: 0; }
+.link { color: #2563eb; cursor: pointer; }
+.presence { font-size: 12px; color: #666; }
+.room { padding: 8px 10px; border-radius: 8px; cursor: pointer; }
+.room.active { background:#eef2ff; }
